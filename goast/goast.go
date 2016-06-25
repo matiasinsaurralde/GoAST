@@ -38,8 +38,8 @@ func ParseDirectory(dir_path, ext string) (map[string]*tree.Node, error) {
     pkgs, err := parser.ParseDir(
         token.NewFileSet(),
         dir_path,
-        func(finfo *os.FileInfo) bool {
-            return strings.HasSuffix(finfo.Name, ext)
+        func(finfo os.FileInfo) bool {
+            return strings.HasSuffix(finfo.Name(), ext)
         },
         0)
     if err != nil {
