@@ -46,7 +46,7 @@ func main() {
     path := args[0]
     ast, err := goast.ParsePackage(path, *ext, *pack)
     if err != nil {
-        error(err.String())
+        panic(err)
         usage(exitcodes["usage"])
     }
     fmt.Println(ast.Dotty())
