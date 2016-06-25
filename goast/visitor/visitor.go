@@ -4,8 +4,8 @@ package visitor
 import "fmt"
 import "go/ast"
 import "reflect"
-import "goast/walk"
-import "goast/tree"
+import "github.com/timtadh/GoAST/goast/walk"
+import "github.com/timtadh/GoAST/goast/tree"
 
 type AST_Visitor struct {
     parent *tree.Node
